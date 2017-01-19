@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         colors="true"
+         bootstrap="vendor/autoload.php"
+>
+    <testsuites>
+        <testsuite>
+            <directory>./tests/</directory>
+        </testsuite>
+        <testsuite name="InProgress">
+            <directory>./tests/BewitGenerateTest.php</directory>
+        </testsuite>
+        <testsuite name="Client">
+            <directory>./tests/ClientHeaderTest.php</directory>
+            <directory>./tests/ClientAuthenticateTest.php</directory>
+            <directory>./tests/ClientMessageTest.php</directory>
+        </testsuite>
+        <testsuite name="Server">
+            <directory>./tests/ServerHeaderTest.php</directory>
+            <directory>./tests/ServerAuthenticateTest.php</directory>
+            <directory>./tests/ServerAuthenticateBewitTest.php</directory>
+            <directory>./tests/ServerAuthenticateMessageTest.php</directory>
+        </testsuite>
+        <testsuite name="Bewit">
+            <directory>./tests/BewitTest.php</directory>
+            <directory>./tests/BewitGenerateTest.php</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>./src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
